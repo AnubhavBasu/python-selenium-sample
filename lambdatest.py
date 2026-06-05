@@ -11,12 +11,12 @@ access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
 # sys.argv[1] is the first argument passed: $(LT_USERNAME)
 # sys.argv[2] is the second argument passed: $(LT_ACCESS_KEY)
 
-# if len(sys.argv) < 3:
-#     print("Error: Missing LambdaTest Username or Access Key arguments.")
-#     sys.exit(1)
+if len(sys.argv) < 3:
+    print("Error: Missing LambdaTest Username or Access Key arguments.")
+    sys.exit(1)
 
-# username = sys.argv[1]
-# access_key = sys.argv[2]
+username = sys.argv[1]
+access_key = sys.argv[2]
 
 # paste your capibility options below
 
