@@ -21,22 +21,44 @@ access_key = sys.argv[2]
 
 # paste your capibility options below
 
+# Create browser options
 options = ChromeOptions()
-options.browser_version = "latest"
-options.platform_name = "Windows 10"
-lt_options = {}
-lt_options["username"] = username
-lt_options["accessKey"] = access_key
-# lt_options["video"] = True
-# lt_options["resolution"] = "1920x1080"
-lt_options["network"] = True
-lt_options["build"] = "Selenium 4 Example"
-# lt_options["project"] = "unit_testing"
-lt_options["smartUI.project"] = "test"
-lt_options["name"] = "Selenium 4 Sample Test"
-lt_options["w3c"] = True
-lt_options["plugin"] = "python-python"
-options.set_capability("LT:Options", lt_options)
+options.browser_version = "146"
+options.platform_name = "Windows 11"  # or "macOS Sonoma", "Ubuntu", etc.
+
+# Define LambdaTest specific settings
+lt_options = {
+    "username": username,
+    "access_key": access_key,
+    "project": "Azure Integration",
+    "name": "Selenium Python Test",
+    "w3c": True,
+    "plugin": "python-python"
+}
+options.set_capability('LT:Options', lt_options)
+
+# Pass the options object into the remote driver (Line 53)
+self.driver = webdriver.Remote(
+    command_executor=grid_url,
+    options=options
+)
+
+# options = ChromeOptions()
+# options.browser_version = "latest"
+# options.platform_name = "Windows 10"
+# lt_options = {}
+# lt_options["username"] = username
+# lt_options["accessKey"] = access_key
+# # lt_options["video"] = True
+# # lt_options["resolution"] = "1920x1080"
+# lt_options["network"] = True
+# lt_options["build"] = "Selenium 4 Example"
+# # lt_options["project"] = "unit_testing"
+# lt_options["smartUI.project"] = "test"
+# lt_options["name"] = "Selenium 4 Sample Test"
+# lt_options["w3c"] = True
+# lt_options["plugin"] = "python-python"
+# options.set_capability("LT:Options", lt_options)
 
 
 # Steps to run Smart UI project (https://beta-smartui.lambdatest.com/)
