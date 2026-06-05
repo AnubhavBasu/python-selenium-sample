@@ -106,5 +106,7 @@ class FirstSampleTest(unittest.TestCase):
         self.driver.quit()
 
 
-if __name__ == "__main__":
-    unittest.main()
+if __name__ == '__main__':
+    # TRICK: Pass argv=[sys.argv[0]] to hide your username and access key 
+    # from the unittest runner so it doesn't try to parse them as test names.
+    unittest.main(argv=[sys.argv[0]])
