@@ -37,11 +37,6 @@ lt_options = {
 }
 options.set_capability('LT:Options', lt_options)
 
-# Pass the options object into the remote driver (Line 53)
-self.driver = webdriver.Remote(
-    command_executor=grid_url,
-    options=options
-)
 
 # options = ChromeOptions()
 # options.browser_version = "latest"
