@@ -4,19 +4,19 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 
-#username = os.getenv("LT_USERNAME")  # Replace the username
-#access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
+username = os.getenv("LT_USERNAME")  # Replace the username
+access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
 
 # sys.argv[0] is always the name of the script itself (lambdatest.py)
 # sys.argv[1] is the first argument passed: $(LT_USERNAME)
 # sys.argv[2] is the second argument passed: $(LT_ACCESS_KEY)
 
-if len(sys.argv) < 3:
-    print("Error: Missing LambdaTest Username or Access Key arguments.")
-    sys.exit(1)
+# if len(sys.argv) < 3:
+#     print("Error: Missing LambdaTest Username or Access Key arguments.")
+#     sys.exit(1)
 
-username = sys.argv[1]
-access_key = sys.argv[2]
+# username = sys.argv[1]
+# access_key = sys.argv[2]
 
 # paste your capibility options below
 
